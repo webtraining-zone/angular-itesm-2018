@@ -1,0 +1,20 @@
+<div class="alert alert-info">
+
+  <div class="b-vehicle" *ngFor="let vehicle of vehicles">
+    <h3>{{ vehicle.name }}</h3>
+    <hr>
+    <div>
+      <strong>Year: </strong> <span>{{ vehicle.year }}</span>
+      <br>
+
+      <div class="doors-container" *ngIf="vehicle.numberOfDoors">
+        <strong>Doors: </strong>
+        <span>{{ vehicle.numberOfDoors }}</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
