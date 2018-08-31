@@ -1,5 +1,6 @@
 interface Vehicle {
-  name: string;
+  model: string;
   year: number;
-  numberOfDoors?: number;
+  price: string;
+  thumbnail: string;
 }

@@ -1,20 +1,9 @@
-<div class="alert alert-info">
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12 col-sm-4 col-md-3" *ngFor="let temporaryVehicle of vehicles">
 
-  <div class="b-vehicle" *ngFor="let vehicle of vehicles">
-    <h3>{{ vehicle.name }}</h3>
-    <hr>
-    <div>
-      <strong>Year: </strong> <span>{{ vehicle.year }}</span>
-      <br>
-
-      <div class="doors-container" *ngIf="vehicle.numberOfDoors">
-        <strong>Doors: </strong>
-        <span>{{ vehicle.numberOfDoors }}</span>
-      </div>
+      <app-vehicle-card [vehicle]="temporaryVehicle"></app-vehicle-card>
 
     </div>
-
   </div>
-
 </div>
-

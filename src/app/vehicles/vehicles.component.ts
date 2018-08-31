@@ -17,7 +17,17 @@ export class VehiclesComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    this.vehicles = this.vehiclesService.getAllVehicles();
+    this.vehiclesService.getAllVehicles().subscribe(
+      (data) => {
+        this.vehicles = data;
+      },
+      (error) => {
+        console.error(error);
+      },
+      () => {
+        console.log('Finished!');
+      }
+    );
   }
 
   ngAfterViewInit(): void {

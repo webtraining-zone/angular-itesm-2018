@@ -1,0 +1,15 @@
+<div class="b-vehicle">
+  This is coming from the CHILD component
+  <div class="card">
+    <img class="card-img-top"
+         src="{{ vehicle.thumbnail | fixImage }}"
+         alt="{{ vehicle.model }}">
+    <div class="card-body">
+      <h3>{{ vehicle.model }}</h3>
+      <p>
+        <strong>Year: </strong> <span>{{ vehicle.year }}</span>
+      </p>
+    </div>
+  </div>
+</div>
+
